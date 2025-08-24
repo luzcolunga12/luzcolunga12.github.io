@@ -31,6 +31,13 @@ h3,h2,h4, p{
       border-radius: 50%;
       object-fit:cover;
     }
+
+.logo1-img
+    {
+       width: 300px;
+  height: 100px;
+
+    }
 .imag {
   display: flex;
   flex-direction:column;
@@ -54,6 +61,13 @@ h3,h2,h4, p{
 .iconos i
 {
     color:black;
+}
+
+.iconos i:hover
+{
+    color: #fca89f;
+    transform: scale(1.2);
+    transition: transform 0.3s, color 0.3s;
 }
 
 .title
@@ -80,7 +94,7 @@ h3,h2,h4, p{
     font-weight: 700;
     -webkit-text-stroke: 1px #fca89f;
     -webkit-text-fill-color: transparent;
-    transition: transform 0.6s;
+    transition: transform 0.5s;
     transform: translateY(-150px);
 }
 
@@ -138,22 +152,7 @@ h3,h2,h4, p{
     box-shadow: 0 4px 16px rgba(0,0,0,0.12);
 }
 
-.porfolio-section
-{
-    margin-top: 20px;
-    text-align: center;
-    opacity :0;
-    transition: opacity 0.5s ease-in-out;
-    visibility: hidden;
-    position: auto;
-}
 
-.portfolio-section.active
-{
-    opacity: 1;
-    visibility: visible;
-    position: static;
-}
 
 .portfolio-section {
   opacity: 0;
@@ -176,3 +175,153 @@ h3,h2,h4, p{
   min-height: 120px;
 }
 
+.drop-tog
+{
+    display: none;
+    transition: color 0.2s;
+ 
+    gap: 10px;
+    transition: all 0.3s ease-in-out;
+
+}
+   
+.portfolio-section h4
+{cursor: pointer;
+}
+.portfolio-section h4.active {
+  color: #fca89f;
+}
+
+.drop-tog.active{
+
+    display: block;
+}
+
+.drop-tog .bi
+{
+    transition: transform 0.3s;
+}
+
+.drop-tog h5
+{
+    color:#fca89f;
+}
+
+.tog-head i {
+  transition: transform 0.3s ease;
+}
+
+.tog-head.active i {
+  transform: rotate(180deg);
+}
+
+.divide {
+  display: flex;
+  justify-content: center;
+}
+
+
+
+.bullet {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  text-align: left;
+
+}
+
+.bullet li {
+  display: flex;
+  align-items: center;
+  gap: 5px; 
+  margin-bottom: 10px;
+}
+
+.bullet li::before {
+  content: '🌸';
+}
+
+.itch-section {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.game-lst{
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+
+  flex-wrap: nowrap;
+  overflow-x: auto;   
+  padding: 10px 0;
+}
+
+.game-lst a {
+  text-decoration: none;
+  color: inherit;
+  width: 315px;
+
+  flex-shrink: 0;
+}
+
+.game-lst img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.game-row p {
+
+  font-size: 0.95rem;
+  color:#fca89f;
+}
+
+.skill-chart {
+  max-width: 600px;
+  margin: 40px auto;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.skill-chart h3 {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #000000;
+}
+
+.skill {
+  margin-bottom: 10px;
+}
+
+.skill span {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #000000;
+}
+
+.bar {
+  background: antiquewhite;
+  border-radius: 6px;
+  overflow: hidden;
+  height: 40px;
+  
+}
+
+.bar div {
+  height: 100%;
+  background: linear-gradient(90deg, #fca89f, #f88b9c);
+  text-align: left;
+  padding-right: 8px;
+  color: antiquewhite;
+  font-size: 0.85rem;
+  line-height: 40px;
+  border-radius: 6px 0 0 6px;
+  width: 0;
+  animation: fillBar 1.5s ease-out forwards;
+  animation-delay: var(--delay);
+}
+
+@keyframes fillBar {
+  from { width: 0; }
+  to { width: var(--target-width); }
+}

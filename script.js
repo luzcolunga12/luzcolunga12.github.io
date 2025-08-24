@@ -5,7 +5,7 @@ window.onload = function() {
     }
 }
 
-//buttons
+//buttons 
 
 document.addEventListener('DOMContentLoaded', function() 
 {
@@ -35,3 +35,16 @@ document.addEventListener('DOMContentLoaded', function()
 
 });
 
+//info
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.portfolio-section h4').forEach(header => {
+    header.addEventListener('click', () => {
+      const content = header.nextElementSibling;
+      if (content && content.classList.contains('drop-tog')) {
+        content.classList.toggle('active');
+        header.classList.toggle('active'); 
+
+      }
+    });
+  });
+});
