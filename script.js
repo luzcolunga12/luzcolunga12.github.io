@@ -48,3 +48,18 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
+document.querySelector('[data-target="skills"]').addEventListener('click', () => {
+  const skillsSection = document.getElementById('skills');
+  skillsSection.classList.add('active');
+
+  const bars = skillsSection.querySelectorAll('.bar div');
+  bars.forEach(bar => {
+    bar.style.animation = 'none';
+    bar.offsetHeight;
+    bar.style.animation = 'fillBar 1.5s ease-out forwards';
+    bar.style.animationDelay = bar.style.getPropertyValue('--delay');
+  });
+});
+
+

@@ -1,7 +1,14 @@
 .bd
 {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: antiquewhite;
+
+  background: linear-gradient(
+    to bottom,
+    antiquewhite 5%,
+    #ffdbd2 50%,
+    #fca89f 70%
+  );
+  min-height: 470vh;
 }
 .name
 {
@@ -277,9 +284,10 @@ h3,h2,h4, p{
 }
 
 .skill-chart {
-  max-width: 600px;
-  margin: 40px auto;
-  font-family: 'Segoe UI', sans-serif;
+  width: 100%;
+  max-width: 900px; 
+  margin: 0 auto;
+  padding: 0 40px;
 }
 
 .skill-chart h3 {
@@ -299,12 +307,15 @@ h3,h2,h4, p{
   color: #000000;
 }
 
+
+
 .bar {
+  width: 100%;
+  height: 48px;
   background: antiquewhite;
   border-radius: 6px;
   overflow: hidden;
-  height: 40px;
-  
+  margin-bottom: 18px;
 }
 
 .bar div {
@@ -313,13 +324,14 @@ h3,h2,h4, p{
   text-align: left;
   padding-right: 8px;
   color: antiquewhite;
-  font-size: 0.85rem;
-  line-height: 40px;
+  font-size: 1rem;
+  line-height: 50px;
   border-radius: 6px 0 0 6px;
   width: 0;
   animation: fillBar 1.5s ease-out forwards;
-  animation-delay: var(--delay);
+
 }
+
 
 @keyframes fillBar {
   from { width: 0; }
